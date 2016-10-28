@@ -1,0 +1,6 @@
+[submodule "inline-c"]
+	path = mods/arhelk/src/inline-c
+	url = https://github.com/Teaspot-Studio/inline-c.git
+[submodule "inline-c-cpp"]
+	path = mods/arhelk/src/inline-c-cpp
+	url = https://github.com/Teaspot-Studio/inline-c-cpp.git

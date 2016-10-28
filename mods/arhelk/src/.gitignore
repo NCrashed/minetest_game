@@ -4,3 +4,4 @@ a.out
 cabal.sandbox.config
 .cabal-sandbox/
 dist/
+dist-newstyle/
