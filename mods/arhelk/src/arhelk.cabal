@@ -7,9 +7,8 @@ author:              Author name here
 maintainer:          example@example.com
 copyright:           2016 Author name here
 category:            Game
-build-type:          Configure
-extra-source-files:  configure
-cabal-version:       >=1.10
+build-type:          Simple
+cabal-version:       >=1.25
 extra-tmp-files:     arhelk.buildinfo
 
 library
@@ -17,6 +16,18 @@ library
   exposed-modules:     Arhelk
   build-depends:       base >= 4.7 && < 5
   default-language:    Haskell2010
+
+foreign-library mod
+  type:                native-shared
+  if os(Windows)
+    options: standalone
+    mod-def-file: mod.def
+
+  hs-source-dirs:      src
+  other-modules:       Arhelk
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+  c-sources:           cbits/hsbracket.c
 
 source-repository head
   type:     git

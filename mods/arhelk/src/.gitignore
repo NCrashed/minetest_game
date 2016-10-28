@@ -1,4 +1,6 @@
 .stack-work/
 a.out
 *.buildinfo
-
+cabal.sandbox.config
+.cabal-sandbox/
+dist/
