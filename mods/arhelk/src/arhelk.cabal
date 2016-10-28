@@ -21,6 +21,7 @@ foreign-library mod
   other-modules:
     Minetest.Cpp
     Minetest.Server
+    Minetest.Entrypoint
     Arhelk
   build-depends:
       base >= 4.7 && < 5
