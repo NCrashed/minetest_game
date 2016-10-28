@@ -10,7 +10,8 @@ foreign export ccall "modExit" c_modExit :: IO ()
 
 c_modInit :: Ptr Server -> IO ()
 c_modInit server = do
-  putStrLn $ "Server pointer address: " ++ show server
+  res <- isSingleplayer server
+  putStrLn $ "Server isSingleplayer: " ++ show res
 
 c_modExit :: IO ()
 c_modExit = return ()
