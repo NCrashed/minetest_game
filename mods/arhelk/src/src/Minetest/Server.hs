@@ -12,7 +12,6 @@ import           Control.Monad.Base
 import           Control.Monad.Catch
 import           Data.Monoid
 import           Foreign
-import           Foreign.Marshal.Utils
 import qualified Language.C.Inline     as C
 import qualified Language.C.Inline.Cpp as C
 import           Minetest.Cpp

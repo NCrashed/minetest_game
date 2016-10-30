@@ -20,12 +20,15 @@ foreign-library mod
   hs-source-dirs:      src
   other-modules:
     Arhelk
+    Cpp
     Cpp.Parent
     Cpp.Pointer
     Cpp.Threading
     Minetest.Cpp
     Minetest.Entrypoint
     Minetest.Environment
+    Minetest.Environment.Client
+    Minetest.Environment.Server
     Minetest.GUIEngine
     Minetest.Server
   build-depends:
@@ -42,6 +45,8 @@ foreign-library mod
   c-sources:
     cbits/hsbracket.c
     src/Minetest/Environment.cpp
+    src/Minetest/Environment/Client.cpp
+    src/Minetest/Environment/Server.cpp
     src/Minetest/GUIEngine.cpp
     src/Minetest/Server.cpp
   extra-libraries:

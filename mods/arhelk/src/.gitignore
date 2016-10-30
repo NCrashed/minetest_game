@@ -6,3 +6,5 @@ cabal.sandbox.config
 dist/
 dist-newstyle/
 src/*/*.cpp
+src/*/*/*.cpp
+src/*/*/*/*.cpp

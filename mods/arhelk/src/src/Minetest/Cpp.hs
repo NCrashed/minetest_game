@@ -3,6 +3,8 @@
 module Minetest.Cpp(
     Server
   , Environment
+  , ClientEnvironment
+  , ServerEnvironment
   , GUIEngine
   , minetestCtx
   ) where
@@ -19,6 +21,12 @@ data Server
 -- | Minetest Environment
 data Environment
 
+-- | Client extension of 'Environment'
+data ClientEnvironment
+
+-- | Server extension of 'Environment'
+data ServerEnvironment
+
 -- | Minetest GUIEngine
 data GUIEngine
 
@@ -27,6 +35,8 @@ minetestCtx = mempty {
     C.ctxTypesTable = Map.fromList [
       (C.TypeName "Server", [t| Server |])
     , (C.TypeName "Environment", [t| Environment |])
+    , (C.TypeName "ClientEnvironment", [t| ClientEnvironment |])
+    , (C.TypeName "ServerEnvironment", [t| ServerEnvironment |])
     , (C.TypeName "GUIEngine", [t| GUIEngine |])
     ]
   }
