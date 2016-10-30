@@ -2,6 +2,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Minetest.Cpp(
     Server
+  , Environment
+  , GUIEngine
   , minetestCtx
   ) where
 
@@ -14,9 +16,17 @@ import qualified Data.Map as Map
 -- | Minetest server tag
 data Server
 
+-- | Minetest Environment
+data Environment
+
+-- | Minetest GUIEngine
+data GUIEngine
+
 minetestCtx :: C.Context
 minetestCtx = mempty {
     C.ctxTypesTable = Map.fromList [
       (C.TypeName "Server", [t| Server |])
+    , (C.TypeName "Environment", [t| Environment |])
+    , (C.TypeName "GUIEngine", [t| GUIEngine |])
     ]
   }
